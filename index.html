@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Your Name</div>
+
+    <button class="menu-btn" aria-label="Open menu" id="menuBtn">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Résumé</a>
+      <a href="#social">Social</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h1>Hi, I’m Your Name 👋</h1>
+      <p>
+        Short introduction: what you’re studying, what you’re interested in, and what kind of projects you want to build.
+      </p>
+      <p><strong>Interests:</strong> list 2–4 academic/career interests.</p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div class="card">
+        <h3>Interactive Project Filter</h3>
+        <label for="filter">Filter by category:</label>
+        <select id="filter">
+          <option value="all">All</option>
+          <option value="web">Web</option>
+          <option value="data">Data</option>
+          <option value="mobile">Mobile</option>
+        </select>
+
+        <p class="hint" id="filterHint">
+          Select a category to show matching projects.
+        </p>
+      </div>
+
+      <div class="grid" id="projectsGrid">
+        <!-- Project card template -->
+        <article class="project-card" data-category="web">
+          <h3>Project Title 1</h3>
+          <p>What it does (2–3 sentences).</p>
+          <ul>
+            <li><strong>My contribution:</strong> ...</li>
+            <li><strong>Tools/concepts:</strong> HTML, CSS, JS, APIs, etc.</li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/YOUR_REPO" target="_blank" rel="noopener">Repo</a>
+            <a href="https://demo-link.com" target="_blank" rel="noopener">Demo</a>
+          </div>
+
+          <button class="open-btn" type="button">Select Project</button>
+        </article>
+
+        <article class="project-card" data-category="data">
+          <h3>Project Title 2</h3>
+          <p>What it does (2–3 sentences).</p>
+          <ul>
+            <li><strong>My contribution:</strong> ...</li>
+            <li><strong>Tools/concepts:</strong> Python, Pandas, ML, etc.</li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/YOUR_REPO2" target="_blank" rel="noopener">Repo</a>
+            <a href="https://demo-link.com" target="_blank" rel="noopener">Demo</a>
+          </div>
+
+          <button class="open-btn" type="button">Select Project</button>
+        </article>
+      </div>
+
+      <p id="selectionMessage" class="selection-message" aria-live="polite"></p>
+      <p class="hint">Tip: Click “Select Project” to trigger the interactive response.</p>
+    </section>
+
+    <section id="resume" class="section">
+      <h2>Résumé</h2>
+      <a class="primary-btn" href="resume.pdf" target="_blank" rel="noopener">
+        View My Résumé
+      </a>
+    </section>
+
+    <section id="social" class="section">
+      <h2>Social</h2>
+      <a class="primary-btn" href="https://www.linkedin.com/in/YOURHANDLE/" target="_blank" rel="noopener">
+        LinkedIn Profile
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Your Name
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
